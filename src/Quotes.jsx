@@ -5,7 +5,7 @@ function Quotes() {
   const [author, setAuthor] = useState("");
   function getQuote() {
     axios
-      .get("http://localhost:5000/", { crossdomain: true })
+      .get("https://quotes-backend-react.herokuapp.com/", { crossdomain: true })
       .then((response) => {
         setText(response.data.text);
         setAuthor(response.data.author);
